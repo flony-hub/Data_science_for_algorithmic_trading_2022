@@ -18,3 +18,6 @@ key="CSA27SHO1NP6VZEW"
 
 ts=TimeSeries(key, output_format='pandas')
 amzn, _= ts.get_daily(symbol='AMZN', outputsize='full')
+
+amzn.columns=['OPEN AMZN', 'HIGH AMZN', 'LOW AMZN', 'CLOSE AMZN', 'VOLUME AMZN']
+amzn.sort_index(axis=0, ascending=True)
